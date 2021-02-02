@@ -1,0 +1,25 @@
+consulta a
+
+select product_id, product_name, list_price
+    from products order by product_name
+
+
+consulta b
+
+select category_id ,count(category_id)
+     from products group by category_id
+
+consulta c
+
+select country_name, address, city, state 
+from countries join locations
+on countries.country_id=locations.country_id
+
+consulta d
+
+select product_id, product_name, quantity
+ from products inner join inventories
+ on products.product_id=inventories.product_id
+ where warehouse_id=6 and like %intel%
+
+ 
